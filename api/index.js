@@ -27,6 +27,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect(process.env.MONGODB_URL)
 
 
+
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
   try{
