@@ -158,7 +158,5 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 
-app.listen(4000 || process.env.MONGODB_URL){
-  console.log('connect to db')
-};
+app.listen(4000 || process.env.MONGODB_URL);
 //
