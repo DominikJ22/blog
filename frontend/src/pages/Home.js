@@ -2,7 +2,7 @@ import {useContext, useState} from "react";
 import {Navigate} from "react-router-dom";
 import {UserContext} from "../UserContext";
 
-export default function LoginPage() {
+export default function HomePage() {
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
   const [redirect,setRedirect] = useState(false);
