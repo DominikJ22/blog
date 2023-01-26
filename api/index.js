@@ -27,6 +27,11 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect(process.env.MONGODB_URL)
 
 
+app.get('/', (req, res) => {
+  res.json('hello')
+})
+
+
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
   try{
@@ -140,5 +145,7 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 
-app.listen(4000 || process.env.MONGODB_URL);
+app.listen(4000);
+
+module.exports = app;
 //
